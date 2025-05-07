@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ims.IMS_applicationController">
+    <children>
+
+        <VBox prefHeight="320.0" prefWidth="360.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="40.0">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <children>
+                <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="360.0">
+                    <children>
+                        <Label text="Parts">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="mainformpartSearch" onAction="#onActionsearchpartField" promptText=" Search by PartID or Name">
+                            <HBox.margin>
+                                <Insets left="160.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+
+                <TableView fx:id="mainformTableView1" prefHeight="220.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="mainformpartidCol1" prefWidth="90.0" text="Part ID">
+                            <graphic>
+
+                            </graphic></TableColumn>
+                        <TableColumn fx:id="mainformpartnameCol1" prefWidth="90.0" text="Part name" />
+                        <TableColumn fx:id="mainformpartinvlevelCol1" prefWidth="90.0" text="Inventory level" />
+                        <TableColumn fx:id="mainformpartcostCol1" prefWidth="90.0" text="Cost per unit" />
+                    </columns>
+                </TableView>
+                <HBox prefHeight="60.0" prefWidth="120.0">
+                    <children>
+                        <Button fx:id="mainformpartaddBtn" mnemonicParsing="false" onAction="#onActionAddPart" text="Add">
+                            <HBox.margin>
+                                <Insets left="195.0" right="10.0" top="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="mainformpartmodifyBtn" mnemonicParsing="false" onAction="#onActionModifyPart" text="Modify">
+                            <HBox.margin>
+                                <Insets right="10.0" top="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="mainformpartdeleteBtn" mnemonicParsing="false" onAction="#onActionDeletePart" text="Delete">
+                            <HBox.margin>
+                                <Insets top="10.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+
+            </children>
+        </VBox>
+        <VBox prefHeight="320.0" prefWidth="360.0" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="40.0">
+            <children>
+                <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="360.0">
+                    <children>
+                        <Label text="Products">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="mainformproductSearch" onAction="#mainformproductsearchBtn" promptText="Search by ProductID or Name">
+                            <HBox.margin>
+                                <Insets left="130.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+
+                <TableView fx:id="mainformTableView2" prefHeight="220.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="mainformproductidCol1" prefWidth="90.0" text="Product ID" />
+                        <TableColumn fx:id="mainformproductnameCol1" prefWidth="90.0" text="Product name" />
+                        <TableColumn fx:id="mainformproductinvlevelCol1" prefWidth="90.0" text="Inventory level" />
+                        <TableColumn fx:id="mainformproductcostCol1" prefWidth="90.0" text="Cost per unit" />
+                    </columns>
+                </TableView>
+                <HBox prefHeight="60.0" prefWidth="120.0">
+                    <children>
+                        <Button fx:id="mainformproductaddBtn" mnemonicParsing="false" onAction="#onActionAddProduct" text="Add">
+                            <HBox.margin>
+                                <Insets left="195.0" right="10.0" top="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="mainformproductmodifyBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionModifyProduct" text="Modify">
+                            <HBox.margin>
+                                <Insets right="10.0" top="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="mainformproductdeleteBtn" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionDeleteProduct" text="Delete">
+                            <HBox.margin>
+                                <Insets top="10.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Label alignment="TOP_LEFT" layoutX="69.0" layoutY="6.0" text="Inventory management system">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="mainformexitBtn" layoutX="728.0" layoutY="360.0" mnemonicParsing="false" onAction="#onActionExitProgram" text="Exit" />
+    </children>
+</AnchorPane>
